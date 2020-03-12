@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: $
+// $Id: SelMesh.hxx 2020/03/12 20:07:31 kanai Exp $
 //
 // Copyright (c) 2010 by Takashi Kanai. All rights reserved.
 //
@@ -24,6 +24,9 @@ public:
   SelMesh() : numSelected_(0) {};
   SelMesh( GLPanel& glpane ) : numSelected_(0) {
     setGLPanel( glpane );
+  };
+  SelMesh( GLPanel& glpane, BBox2& bbox ) : numSelected_(0) {
+    init( glpane, bbox );
   };
   virtual ~SelMesh(){};
 

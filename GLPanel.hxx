@@ -1,6 +1,6 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx $
+// $Id: GLPanel.hxx 2020/03/12 22:23:44 kanai Exp $
 //
 // Copyright (c) 2002-2010 by Takashi Kanai. All rights reserved. 
 //
@@ -33,7 +33,7 @@ using namespace std;
 #include "Arcball.hxx"
 #include "GLLight.hxx"
 #include "GLMaterial.hxx"
-
+#include "BBox2.hxx"
 #include "PNGImage.hxx"
 
 #include "shaders.h"
@@ -924,6 +924,9 @@ public:
   void setIsMove( bool f ) { moveFlag_ = f; };
   void setIsZoom( bool f ) { zoomFlag_ = f; };
 
+  void setSelMode( int n ) { sel_mode_ = n; };
+  int selMode() const { return sel_mode_; };
+  
   //
   // Texture functions
   //
@@ -1062,11 +1065,20 @@ public:
   void setIsGradientBackground( bool f ) { gradientBackground_ = f; };
   bool isGradientBackground() const { return gradientBackground_; };
   
+  // record PNG Image
+  void setRecordPNG( bool r ) { recordPNG_ = r; };
+  bool isRecordPNG() const { return recordPNG_; };
+  void setPNGFile( char* str ) { pngfile_ = str; };
+
   // arcball
   Arcball& manip() { return manip_; };
 
+  bool isCaptureDepth() const { return isCaptureDepth_; };
+  void setIsCaptureDepth( bool f ) { isCaptureDepth_ = f; };
+
+
 private:
-  
+
   int width_;
   int height_;
 
@@ -1108,6 +1120,11 @@ private:
 
   // Gradient Background flag
   bool gradientBackground_;
+
+  // record PNG
+  bool recordPNG_;
+  std::string pngfile_;
+  bool isCaptureDepth_;
 
   // Arcball
   Arcball manip_;
@@ -1225,6 +1242,9 @@ private:
     }
   };
 
+protected:
+  int sel_mode_;
+  BBox2 sel_rect_;
 
 };
 

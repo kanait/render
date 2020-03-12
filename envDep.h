@@ -33,7 +33,7 @@
 #endif
 
 #if defined(_WINDOWS)
-#include "stdafx.h"
+//#include "stdafx.h"
 #endif
 
 // M_PI

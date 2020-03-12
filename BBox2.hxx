@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: BBox2.hxx,v 1.1.1.1 2005/04/01 17:12:52 kanai Exp $
+// $Id: BBox2.hxx 2020/03/12 18:26:03 kanai Exp $
 //
 // Copyright (c) 2002 by Keio Research Institute at SFC
 // All rights reserved. 
@@ -16,6 +16,7 @@
 #ifdef VM_INCLUDE_NAMESPACE
 using namespace kh_vecmath;
 #endif // VM_INCLUDE_NAMESPACE
+typedef Point2<int> Point2i;
 
 class BBox2 {
 
