@@ -1,10 +1,10 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: $
+// $Id: MeshR.hxx 2021/06/01 01:28:23 kanai Exp $
 //
 // Mesh class for Rendering
 //
-// Copyright (c) 2003-2010 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

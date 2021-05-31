@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: $
+// $Id: GLMesh.hxx 2021/06/01 01:23:47 kanai Exp $
 //
 //   Generic OpenGL Mesh draw class
 //
-// Copyright (c) 2002-2010 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -2,7 +2,7 @@
 //
 // C++11 timer class based on std::chrono
 //
-// Copyright (c) 2016 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

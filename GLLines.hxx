@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLLines.hxx 2020/03/12 23:01:23 kanai Exp $
+// $Id: GLLines.hxx 2021/06/01 01:23:22 kanai Exp $
 //
-// Copyright (c) 2004 by Keio Research Institute at SFC
-// All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: BBox2.hxx 2020/03/12 18:26:03 kanai Exp $
+// $Id: BBox2.hxx 2021/06/01 01:22:00 kanai Exp $
 //
-// Copyright (c) 2002 by Keio Research Institute at SFC
-// All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

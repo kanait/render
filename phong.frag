@@ -1,6 +1,12 @@
-#version 120
+////////////////////////////////////////////////////////////////////
+//
+// $Id: phong.frag 2021/06/01 01:30:29 kanai Exp $
+//
+// Copyright (c) by Takashi Kanai. All rights reserved. 
+//
+////////////////////////////////////////////////////////////////////
 
-// phong.frag
+#version 120
 
 varying vec4 position;
 varying vec3 normal;

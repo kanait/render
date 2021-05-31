@@ -1,8 +1,8 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2020/03/12 22:23:44 kanai Exp $
+// $Id: GLPanel.hxx 2021/06/01 01:25:32 kanai Exp $
 //
-// Copyright (c) 2002-2010 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

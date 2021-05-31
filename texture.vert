@@ -1,6 +1,12 @@
-#version 120
+////////////////////////////////////////////////////////////////////
+//
+// $Id: texture.vert 2021/06/01 01:33:10 kanai Exp $
+//
+// Copyright (c) by Takashi Kanai. All rights reserved. 
+//
+////////////////////////////////////////////////////////////////////
 
-// texture.vert
+#version 120
 
 varying vec4 position;
 varying vec3 normal;

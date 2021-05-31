@@ -1,11 +1,17 @@
+////////////////////////////////////////////////////////////////////
 //
-// simple wrapper to encapsulate a framebuffer object using render-to-texture and 
-// its associated texture object
+// $Id: RenderTextureFBO.h 2021/06/01 01:34:43 kanai Exp $
 //
-// by Takashi Kanai
+// simple wrapper to encapsulate a framebuffer object using 
+// render-to-texture and its associated texture object
 //
 // v1.0 - initial release
-// v1.1 - added texFormat_, texType_ attibutes in glTexImage2D to create textures
+// v1.1 - added texFormat_, texType_ attibutes in glTexImage2D
+//        to create textures
+//
+// Copyright (c) by Takashi Kanai. All rights reserved. 
+//
+////////////////////////////////////////////////////////////////////
 
 #ifndef RENDER_TEXTURE_FBO_H
 #define RENDER_TEXTURE_FBO_H

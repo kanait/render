@@ -1,11 +1,10 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: timer.hxx,v 1.1.1.1 2005/04/01 17:12:53 kanai Exp $
+// $Id: timer.hxx 2021/06/01 01:33:24 kanai Exp $
 //
 // timer class
 //
-// Copyright (c) 2002 by Keio Research Institute at SFC
-// All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -1,8 +1,8 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: SelMeshA.hxx 2020/03/12 20:13:48 kanai Exp $
+// $Id: SelMeshA.hxx 2021/06/01 01:31:56 kanai Exp $
 //
-// Copyright (c) 2002-2020 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: mtldata.h,v 1.2 2002/12/25 08:11:37 kanai Exp $
+// $Id: mtldata.h 2021/06/01 01:28:38 kanai Exp $
 //
-// Copyright (c) 1997-2002 by Keio Research Institute at SFC
-// All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -1,10 +1,10 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLSRMesh.hxx 2020/03/12 21:04:44 kanai Exp $
+// $Id: GLSRMesh.hxx 2021/06/01 01:25:55 kanai Exp $
 //
 //   OpenGL SRMesh rendering class
 //
-// Copyright (c) 2004-2020 by Takashi Kanai. All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 

@@ -1,9 +1,8 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: ColorConv.hxx,v 1.1.1.1 2005/04/01 17:12:52 kanai Exp $
+// $Id: ColorConv.hxx 2021/06/01 01:22:39 kanai Exp $
 //
-// Copyright (c) 2002-2003 by Keio Research Institute at SFC
-// All rights reserved. 
+// Copyright (c) by Takashi Kanai. All rights reserved. 
 //
 ////////////////////////////////////////////////////////////////////
 
