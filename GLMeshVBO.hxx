@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLMeshVBO.hxx 2021/06/01 01:25:19 kanai Exp $
+// $Id: GLMeshVBO.hxx 2021/06/01 12:55:32 kanai Exp $
 //
 // GLMeshVBO.hxx
 // OpenGL Mesh VBO draw class
@@ -157,7 +157,7 @@ public:
 
   void draw() {
     ::glPushMatrix();
-    // if ( isDrawShading_ ) { drawShading(); }
+    if ( isDrawShading_ ) { drawShading(); }
     if ( isDrawWireframe_ ) { drawWireframe(); };
     ::glPopMatrix();
   };
