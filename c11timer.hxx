@@ -1,8 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
+// $Id: c11timer.hxx 2021/06/05 13:23:17 kanai Exp $
+//
 // C++11 timer class based on std::chrono
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

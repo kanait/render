@@ -1,8 +1,9 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: IDInfo.hxx 2021/06/01 01:28:06 kanai Exp $
+// $Id: IDInfo.hxx 2021/06/05 13:18:14 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved.
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

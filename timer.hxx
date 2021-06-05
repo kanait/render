@@ -1,10 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: timer.hxx 2021/06/01 01:33:24 kanai Exp $
+// $Id: timer.hxx 2021/06/05 13:10:55 kanai Exp $
 //
-// timer class
+// (old) timer class
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

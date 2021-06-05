@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: RenderTextureFBO.h 2021/06/01 01:34:43 kanai Exp $
+// $Id: RenderTextureFBO.h 2021/06/05 13:09:50 kanai Exp $
 //
 // simple wrapper to encapsulate a framebuffer object using 
 // render-to-texture and its associated texture object
@@ -9,7 +9,8 @@
 // v1.1 - added texFormat_, texType_ attibutes in glTexImage2D
 //        to create textures
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

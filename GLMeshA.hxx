@@ -1,10 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLMeshA.hxx 2021/06/01 01:24:22 kanai Exp $
+// $Id: GLMeshA.hxx 2021/06/05 13:21:24 kanai Exp $
 //
 //   OpenGL MeshA draw class
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

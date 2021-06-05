@@ -1,8 +1,9 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: OBJRIO.hxx 2021/06/01 01:30:06 kanai Exp $
+// $Id: OBJRIO.hxx 2021/06/05 13:17:03 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

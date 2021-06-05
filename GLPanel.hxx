@@ -1,8 +1,9 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2021/06/01 01:25:32 kanai Exp $
+// $Id: GLPanel.hxx 2021/06/05 13:20:16 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
@@ -16,8 +17,7 @@
 // VS2015 requires <math.h> to be used; <cmath> doesn't seem to honor
 // _USE_MATH_DEFINES.
 #define _USE_MATH_DEFINES
-#include <math.h>
-
+#include <cmath>
 #include <string>
 #include <vector>
 using namespace std;

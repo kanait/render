@@ -1,8 +1,9 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: shaders.h 2021/06/01 01:32:21 kanai Exp $
+// $Id: shaders.h 2021/06/05 13:13:31 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

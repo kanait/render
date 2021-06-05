@@ -1,10 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: strutil.h 2021/06/01 01:32:43 kanai Exp $
+// $Id: strutil.h 2021/06/05 13:12:21 kanai Exp $
 //
 // STL string utility
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 

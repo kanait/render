@@ -1,10 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLMaterial.hxx 2021/06/01 01:23:35 kanai Exp $
+// $Id: GLMaterial.hxx 2021/06/05 13:21:59 kanai Exp $
 //
 //   Material setting class for OpenGL
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
