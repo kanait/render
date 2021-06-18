@@ -1,6 +1,6 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2021/06/05 13:20:16 kanai Exp $
+// $Id: GLPanel.hxx 2021/06/18 20:54:43 kanai Exp $
 //
 // Copyright (c) 2021 Takashi Kanai
 // Released under the MIT license
@@ -21,6 +21,7 @@
 #include <string>
 #include <vector>
 using namespace std;
+#include <math.h>
 
 #define GLEW_STATIC 1
 #include <GL/glew.h>
