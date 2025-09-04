@@ -1,6 +1,6 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2021/06/01 01:25:32 kanai Exp $
+// $Id: GLPanel.hxx 2025/09/04 11:31:32 kanai Exp 
 //
 // Copyright (c) by Takashi Kanai. All rights reserved. 
 //
@@ -27,6 +27,9 @@ using namespace std;
 #if defined(WIN32)
 #include "GL/wglew.h"
 #endif
+
+#include <GL/glu.h>
+
 // gl.h is included in glew.h
 //#include <GL/gl.h>
 
