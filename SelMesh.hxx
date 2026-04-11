@@ -10,8 +10,13 @@
 #ifndef _SELMESH_HXX
 #define _SELMESH_HXX 1
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#else
 #include <GL/gl.h>
 #include <GL/glu.h>
+#endif
 
 #include "GLPanel.hxx"
 #include "BBox2.hxx"

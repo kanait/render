@@ -10,7 +10,11 @@
 #ifndef _SELMESHA_HXX
 #define _SELMESHA_HXX 1
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 #include <vector>
 using namespace std;

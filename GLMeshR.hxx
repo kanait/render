@@ -16,7 +16,11 @@
 
 #include "mydef.h"
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 #include "MeshR.hxx"
 #include "GLMesh.hxx"
