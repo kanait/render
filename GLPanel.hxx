@@ -1,6 +1,6 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2021/06/22 00:26:42 kanai Exp $
+// $Id: GLPanel.hxx 2025/09/04 11:31:32 kanai Exp
 //
 // Copyright (c) 2021 Takashi Kanai
 // Released under the MIT license
@@ -23,11 +23,20 @@
 using namespace std;
 #include <math.h>
 
+#if defined(_WIN32) || defined(WIN32)
 #define GLEW_STATIC 1
+#endif
 #include <GL/glew.h>
 #if defined(WIN32)
 #include "GL/wglew.h"
 #endif
+
+#if defined(__APPLE__)
+#include <OpenGL/glu.h>
+#else
+#include <GL/glu.h>
+#endif
+
 // gl.h is included in glew.h
 //#include <GL/gl.h>
 
