@@ -9,9 +9,6 @@
 
 #include "envDep.h"
 
-#include <string>
-using namespace std;
-
 #include <GL/glew.h>
 //#include "GL/wglew.h"
 
@@ -27,7 +24,6 @@ using namespace kh_vecmath;
 
 #include "GLPanel.hxx"
 #include "GLMaterial.hxx"
-#include "PNGImage.hxx"
 
 static bool isCapture = false;
 static bool isCaptureDepth = false;
@@ -92,9 +88,6 @@ void display()
   if ( isCapture == true ) 
     {
       rt->Read();
-      PNGImage pi( capture_width, capture_height, isCaptureDepth );
-      string filename = (isCaptureDepth) ? "screend.png" : "screen.png";
-      pi.capture_and_write( filename.c_str() );
       rt->Deactivate();
 
       isCapture = false;

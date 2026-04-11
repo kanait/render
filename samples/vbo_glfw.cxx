@@ -26,14 +26,12 @@ using namespace kh_vecmath;
 #include "GLPanel.hxx"
 #include "GLMaterial.hxx"
 #include "VWIO.hxx"
-#include "PNGImage.hxx"
 
 int width = 1024;
 int height = 1024;
 
 GLPanel pane;
 
-bool pngflag = false;
 // keyboard
 bool shift_key_pressed = false;
 bool control_key_pressed = false;
@@ -204,12 +202,6 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
       VWIO vw_out;
       vw_out.outputToFile( "tmp.vw", pane.manip() );
       cout << "done." << endl;
-    }
-
-  // p
-  else if ( (key == GLFW_KEY_P) && (action == GLFW_PRESS) )
-    {
-      pngflag = true;
     }
 
   // shift
@@ -390,13 +382,6 @@ int main( int argc, char **argv )
 
       sprintf( txt, "VBO GLFW - %s", buf );
       glfwSetWindowTitle( window, txt );
-
-      if ( pngflag )
-        {
-          PNGImage pi( width, height, false );
-          pi.capture_and_write("screen.png");
-          pngflag = false;
-        }
 
       glfwSwapBuffers(window);
       glfwPollEvents();
