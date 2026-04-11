@@ -22,13 +22,19 @@
 #include <vector>
 using namespace std;
 
+#if defined(_WIN32) || defined(WIN32)
 #define GLEW_STATIC 1
+#endif
 #include <GL/glew.h>
 #if defined(WIN32)
 #include "GL/wglew.h"
 #endif
 
+#if defined(__APPLE__)
+#include <OpenGL/glu.h>
+#else
 #include <GL/glu.h>
+#endif
 
 // gl.h is included in glew.h
 //#include <GL/gl.h>
