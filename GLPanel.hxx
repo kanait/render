@@ -1,8 +1,9 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: GLPanel.hxx 2021/06/01 01:25:32 kanai Exp $
+// $Id: GLPanel.hxx 2025/09/04 11:31:32 kanai Exp
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
@@ -16,17 +17,26 @@
 // VS2015 requires <math.h> to be used; <cmath> doesn't seem to honor
 // _USE_MATH_DEFINES.
 #define _USE_MATH_DEFINES
-#include <math.h>
-
+#include <cmath>
 #include <string>
 #include <vector>
 using namespace std;
+#include <math.h>
 
+#if defined(_WIN32) || defined(WIN32)
 #define GLEW_STATIC 1
+#endif
 #include <GL/glew.h>
 #if defined(WIN32)
 #include "GL/wglew.h"
 #endif
+
+#if defined(__APPLE__)
+#include <OpenGL/glu.h>
+#else
+#include <GL/glu.h>
+#endif
+
 // gl.h is included in glew.h
 //#include <GL/gl.h>
 
@@ -34,7 +44,7 @@ using namespace std;
 #include "GLLight.hxx"
 #include "GLMaterial.hxx"
 #include "BBox2.hxx"
-#include "PNGImage.hxx"
+//#include "PNGImage.hxx"
 
 #include "shaders.h"
 
@@ -963,21 +973,22 @@ public:
 #endif
   }
 
-  int loadTexture( const char* const filename,
-                   std::vector<unsigned char>& img,
-                   int* format, int* w, int* h ) {
-    initTexture();
+  // int loadTexture( const char* const filename,
+  //                  std::vector<unsigned char>& img,
+  //                  int* format, int* w, int* h ) {
+  // "non-use PNGImage" version
+  unsigned int loadTexture( unsigned char* image, int w, int h, int channel ) {
 
-    PNGImage pngimage;
-    if ( pngimage.inputFromFile( filename, img ) == false ) return -1;
-
+    if ( !numUnits_ ) initTexture();
+    // PNGImage pngimage;
+    // if ( pngimage.inputFromFile( filename, img ) == false ) return -1;
     if ( current_tex_id_ >= numUnits_ ) return -1;
 
     int i = current_tex_id_;
 
-    if ( pngimage.channel()==3) *format = GL_RGB; else *format = GL_RGBA;
-    *w = pngimage.w();
-    *h = pngimage.h();
+    // if ( pngimage.channel()==3) *format = GL_RGB; else *format = GL_RGBA;
+    // *w = pngimage.w();
+    // *h = pngimage.h();
 
     //   ::glActiveTextureARB( GL_TEXTURE0_ARB + i );
     ::glBindTexture( GL_TEXTURE_2D, texObj_[i] );
@@ -990,22 +1001,28 @@ public:
     ::glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT );
     ::glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT );
 
-#if 1
-    ::gluBuild2DMipmaps( GL_TEXTURE_2D,
-                         *format,
-                         *w, *h,
-                         *format,
-                         GL_UNSIGNED_BYTE,
-                         &(img[0]) );
-#endif
-  
-#if 0
-    ::glTexImage2D( GL_TEXTURE_2D, 0,
-                    pngimage.channel(),
-                    pngimage.w(), pngimage.h(),
-                    0,
-                    *format, GL_UNSIGNED_BYTE, &(img[0]) );
-#endif
+    if ( channel == 3 )
+      //::glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, w, h, 0, GL_RGB, GL_UNSIGNED_BYTE, image); 
+      ::gluBuild2DMipmaps( GL_TEXTURE_2D, GL_RGB, w, h, GL_RGB, GL_UNSIGNED_BYTE, image );
+    else if( channel == 4 )
+      //::glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, w, h, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
+      ::gluBuild2DMipmaps( GL_TEXTURE_2D, GL_RGBA, w, h, GL_RGBA, GL_UNSIGNED_BYTE, image );
+// #if 1
+//     ::gluBuild2DMipmaps( GL_TEXTURE_2D,
+//                          *format,
+//                          *w, *h,
+//                          *format,
+//                          GL_UNSIGNED_BYTE,
+//                          &(img[0]) );
+// #endif
+
+// #if 0
+//     ::glTexImage2D( GL_TEXTURE_2D, 0,
+//                     pngimage.channel(),
+//                     pngimage.w(), pngimage.h(),
+//                     0,
+//                     *format, GL_UNSIGNED_BYTE, &(img[0]) );
+// #endif
 
     //   ::glTexEnvi( GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE );
 

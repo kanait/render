@@ -1,10 +1,11 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: GLSRMesh.hxx 2021/06/01 01:25:55 kanai Exp $
+// $Id: GLSRMesh.hxx 2021/06/05 13:19:11 kanai Exp $
 //
 //   OpenGL SRMesh rendering class
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
@@ -15,7 +16,11 @@
 
 #include "mydef.h"
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 //  #include <Point3.h>
 #include <Vector3.h>

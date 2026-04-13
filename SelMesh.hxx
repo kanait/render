@@ -1,16 +1,22 @@
 ////////////////////////////////////////////////////////////////////
 //
-// $Id: SelMesh.hxx 2021/06/01 01:31:50 kanai Exp $
+// $Id: SelMesh.hxx 2021/06/05 13:15:15 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved.
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
 #ifndef _SELMESH_HXX
 #define _SELMESH_HXX 1
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#include <OpenGL/glu.h>
+#else
 #include <GL/gl.h>
 #include <GL/glu.h>
+#endif
 
 #include "GLPanel.hxx"
 #include "BBox2.hxx"

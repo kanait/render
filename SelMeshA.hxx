@@ -1,15 +1,20 @@
 ﻿////////////////////////////////////////////////////////////////////
 //
-// $Id: SelMeshA.hxx 2021/06/01 01:31:56 kanai Exp $
+// $Id: SelMeshA.hxx 2021/06/05 13:14:48 kanai Exp $
 //
-// Copyright (c) by Takashi Kanai. All rights reserved. 
+// Copyright (c) 2021 Takashi Kanai
+// Released under the MIT license
 //
 ////////////////////////////////////////////////////////////////////
 
 #ifndef _SELMESHA_HXX
 #define _SELMESHA_HXX 1
 
+#ifdef __APPLE__
+#include <OpenGL/gl.h>
+#else
 #include <GL/gl.h>
+#endif
 
 #include <vector>
 using namespace std;
