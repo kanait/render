@@ -15,7 +15,7 @@
 #define foreachP(a,b,c) for(a::iterator c=(b).begin();(c)!=(b).end();(c)++)
 
 //
-// Ç±Ç±Ç©ÇÁêÊÇÕÇ¢ÇÁÇ»Ç¢Ç©Ç‡ÇµÇÍÇ»Ç¢
+// Legacy block below (may be unused).
 //
 
 #define NULLID		-1

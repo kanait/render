@@ -12,7 +12,7 @@
 #include "envDep.h"
 
 #if defined(_WINDOWS)
-#include "stdafx.h"
+//#include "stdafx.h"
 #endif
 
 #include "mydef.h"

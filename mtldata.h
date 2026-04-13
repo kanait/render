@@ -31,42 +31,45 @@ typedef struct _material {
 #define MTLNUM 36
 #define NUM_MTL_ITEMS 17
 
-// 0 グレー（光沢あり）
-// 1 黄（光沢なし）
-// 2 黄土（光沢あり）
-// 3 黄（光沢なし）
-// 4 黄土（光沢あり）
-// 5 オレンジ（光沢なし）
-// 6 オレンジ（光沢あり）
-// 7 オレンジ（光沢なし）
-// 8 赤オレンジ（光沢あり）
-// 9 赤オレンジ（光沢なし）
-// 10 赤（光沢あり）
-// 11 赤ピンク（光沢なし）
-// 12 赤紫（光沢あり）
-// 13 赤紫（光沢なし）
-// 14 赤紫（光沢あり）
-// 15 赤紫（光沢なし）
-// 16 紫（光沢あり）
-// 17 紫（光沢なし）
-// 18 青紫（光沢あり）
-// 19 青紫（光沢なし）
-// 20 青（光沢あり）
-// 21 青（光沢なし）
-// 22 淡青（光沢あり）
-// 23 淡青（光沢なし）
-// 24 空青（光沢あり）
-// 25 青緑（光沢なし）
-// 26 青緑（光沢あり）
-// 27 黄緑（光沢なし）
-// 28 黄緑（光沢あり）
-// 29 黄緑（光沢なし）
-// 30 黄緑（光沢あり）
-// 31 白（光沢あり）
-// 32 濃グレー（光沢あり）
-// 33 濃グレー（光沢なし）
-// 34 黒（光沢あり）
-// 35 黒（光沢なし）
+// Preset materials 0..35: names in mtltxt[], packed floats in mtlall[].
+// Each entry uses NUM_MTL_ITEMS floats: ambient4, diffuse4, emission4, specular4, shininess.
+// "(glossy)" = stronger specular highlight; "(matte)" = softer / less glossy look in the preset.
+// 0  gray (glossy)
+// 1  yellow (matte)
+// 2  yellow ochre (glossy)
+// 3  yellow (matte)
+// 4  yellow ochre (glossy)
+// 5  orange (matte)
+// 6  orange (glossy)
+// 7  orange (matte)
+// 8  red-orange (glossy)
+// 9  red-orange (matte)
+// 10 red (glossy)
+// 11 red-pink (matte)
+// 12 red-purple (glossy)
+// 13 red-purple (matte)
+// 14 red-purple (glossy)
+// 15 red-purple (matte)
+// 16 purple (glossy)
+// 17 purple (matte)
+// 18 blue-violet (glossy)
+// 19 blue-violet (matte)
+// 20 blue (glossy)
+// 21 blue (matte)
+// 22 pale blue (glossy)
+// 23 pale blue (matte)
+// 24 sky blue (glossy)
+// 25 blue-green (matte)
+// 26 blue-green (glossy)
+// 27 yellow-green (matte)
+// 28 yellow-green (glossy)
+// 29 yellow-green (matte)
+// 30 yellow-green (glossy)
+// 31 white (glossy)
+// 32 dark gray (glossy)
+// 33 dark gray (matte)
+// 34 black (glossy)
+// 35 black (matte)
 
 static const char *(mtltxt[]) = {
   "default",

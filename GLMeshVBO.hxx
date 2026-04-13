@@ -87,10 +87,11 @@ public:
     std::vector<unsigned int>& indices = mesh().indices();
     ::glGenBuffers( 1, &shading_ebo_ );
     ::glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, shading_ebo_ );
-    ::glBufferData( GL_ELEMENT_ARRAY_BUFFER, 
-                       indices.size() * sizeof(GLuint),
-                       &indices[0], 
-                       usage_ );
+    {
+      const GLsizeiptr idxBytes = (GLsizeiptr)( indices.size() * sizeof( GLuint ) );
+      const void* idxPtr = indices.empty() ? NULL : (const void*)&indices[0];
+      ::glBufferData( GL_ELEMENT_ARRAY_BUFFER, idxBytes, idxPtr, usage_ );
+    }
 
 #if 0
     // indices for GL Lines
@@ -105,16 +106,17 @@ public:
         windices_.push_back((mesh_->indices()[3*i]));
       }
 #endif
-    //mesh().createEdgesFromFaces();
+    mesh().createEdgesFromFaces();
 
     // ebo for wireframe initialize
     std::vector<unsigned int>& eindices = mesh().eindices();
     ::glGenBuffers( 1, &wireframe_ebo_ );
     ::glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, wireframe_ebo_ );
-    ::glBufferData( GL_ELEMENT_ARRAY_BUFFER,
-                    eindices.size() * sizeof(GLuint),
-                    &eindices[0],
-                    usage_ );
+    {
+      const GLsizeiptr eBytes = (GLsizeiptr)( eindices.size() * sizeof( GLuint ) );
+      const void* ePtr = eindices.empty() ? NULL : (const void*)&eindices[0];
+      ::glBufferData( GL_ELEMENT_ARRAY_BUFFER, eBytes, ePtr, usage_ );
+    }
 
     // get buffer size
     GLint v_size = 0;
