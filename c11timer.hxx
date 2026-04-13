@@ -13,6 +13,8 @@
 #define _C11TIMER_HXX 1
 
 #include <chrono>
+#include <ctime>
+#include <string>
 
 class C11Timer {
 
@@ -29,27 +31,30 @@ public:
   };
 
   // 日付を取得
-  static void GetDate(tm* currentTime) {
-    time_t timer;
+  static void GetDate(std::tm* currentTime) {
+    ::time_t timer;
 
-    time(&timer);
+    ::time(&timer);
 #if defined(_WIN32) || defined(_WIN64)
     localtime_s(currentTime, &timer);
 #else
-    currentTime = localtime(&timer);
+    std::tm* local = ::localtime(&timer);
+    if ( local )
+      *currentTime = *local;
 #endif
   };
 
   // 現在の日付、時刻を文字列にして返す
   static std::string GetDateString() {
-    tm time;
-    GetDate( &time );
-    string str = std::to_string(time.tm_year+1900) + "_"
-      + std::to_string(time.tm_mon) + "_"
-      + std::to_string(time.tm_mday) + "_"
-      + std::to_string(time.tm_hour) + "_"
-      + std::to_string(time.tm_min) + "_"
-      + std::to_string(time.tm_sec);
+    /* Not named "time": MSVC CRT #defines time -> _time64 etc., which breaks "std::tm time". */
+    std::tm tmb;
+    GetDate( &tmb );
+    std::string str = std::to_string( tmb.tm_year + 1900 ) + "_"
+      + std::to_string( tmb.tm_mon ) + "_"
+      + std::to_string( tmb.tm_mday ) + "_"
+      + std::to_string( tmb.tm_hour ) + "_"
+      + std::to_string( tmb.tm_min ) + "_"
+      + std::to_string( tmb.tm_sec );
     return str;
   };
 

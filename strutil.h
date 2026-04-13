@@ -22,12 +22,12 @@ class StrUtil {
 
 public:
 
-  // 最初の文字を見つける
+  // First whitespace-delimited token from str -> fw
   void first_word( std::string& str, std::string& fw ) {
     std::istringstream in(str); in >> fw;
   };
 
-  // 最初の文字を見つける
+  // n-th whitespace-delimited token (reads n tokens, returns last)
   void nth_word( std::string& str, int n, std::string& fw ) {
     std::istringstream in(str);
     int i = 0;
@@ -36,7 +36,7 @@ public:
     fw = t;
   };
 
-  // 文字列カウント
+  // Number of whitespace-delimited tokens
   int word_count( std::string& str ) {
     std::istringstream in(str);
 
@@ -47,14 +47,14 @@ public:
     return count;
   };
 
-  // 整数型を文字列型に変換
+  // int to string
   std::string itos( int n ) {
     std::stringstream str_stream;
     str_stream << n;
     return str_stream.str();
   };
 
-  // 整数型を文字列型に変換
+  // float to string
   std::string ftos( float n ) {
     std::stringstream str_stream;
     str_stream << n;
@@ -72,7 +72,7 @@ public:
             itr++;
         }
         itr = ext.end()-1;
-        while(itr != ext.begin()){    // パスの最後に\0やスペースがあったときの対策
+        while(itr != ext.begin()){    // trim trailing NUL or space from extension
             if(*itr == 0 || *itr == 32){
                 ext.erase(itr--);
             }
@@ -87,5 +87,3 @@ public:
 };
 
 #endif // _STRUTIL_H
-
-  

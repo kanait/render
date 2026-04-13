@@ -164,8 +164,8 @@ private:
   float wheelScale_;
   float seezo_;
 
-  int scrn_x_, scrn_y_;  // 取得した画面の座標
-  int halfW_, halfH_;  // half size of window
+  int scrn_x_, scrn_y_;  // last set screen position (see setScrnXY)
+  int halfW_, halfH_;  // half window size (pixels) for arcball radius
   
 };
 
